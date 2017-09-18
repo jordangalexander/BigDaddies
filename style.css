@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    background-color: '#003380';
+}
+
+#wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
+header {
+    background-color: #00134d;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    z-index: 20;
+    overflow: hidden;
+}
+
+nav {
+    text-align: left;
+    width: 25%;
+    padding: 10px 0;
+    display: inline;
+    float: left;
+}
+
+header nav li {
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Saira Semi Condensed';
+    width: 100px;
+}
+
+
+main {
+    z-index: 1;
+    background-image: url("images/skyline.jpg");
+    background-position: -20px -80px;
+    position: relative;
+    text-align: center;
+    top: 70px;
+    border: solid black;
+    border-bottom: 0px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Saira Semi Condensed';
+    color: white;
+    width: 50%;
+    display: inline;
+    float: left;
+    margin-top: 5px;
+}
+
+.shit {
+    width: 25%;
+    float: left;
+}
+
+.buysell {
+    height: 750px;
+    text-align: center;
+}
+
+.buysell li {
+    display: inline-block;
+    font-size: 100px;
+    font-family: 'Saira Semi Condensed';
+    color: white;
+    width: 270px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 150px;
+    border: solid 5px white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.moreshit {
+    background-color: #00134d;
+    color: white;
+    font-family: 'Saira Semi Condensed';
+    height: 800px;
+    padding-top: 20px;
+}
+
+.moreshit h2 {
+    color: white;
+    font-family: 'Saira Semi Condensed';
+}
+
+
+#shit {
+    background-color: #00134d;
+    width: 600px;
+    margin: auto;
+    height: 300px;
+    border: solid 5px white;
+    padding-top: 10px;
+}
+
+footer {
+    position: fixed;
+    background-color: #00134d;
+    width: 100%;
+    z-index: 40;
+    bottom: 0;
+    padding-top: 5px;
+    border-top: solid white 3px;
+}
+
+#footleft {
+    width: 25%;
+    float: left;
+    display:inline;
+}
+
+#footleft li {
+    display: inline;
+    color: white;
+    margin: 0 25px;
+}
+
+#footmid {
+    width: 50%;
+    height: 50px;
+    float: left;
+    display: inline-block;
+    text-align: center;
+}
+
+#footmid li {
+    background-color: white;
+    width: 120px;
+    display: inline-block;
+    font-size: 20px;
+    border: solid 3px white;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+#footright {
+    width: 25%;
+    height: 50px;
+    float: left;
+    display: inline;
+    text-align: right;
+}
+
+#footright li {
+    display: inline;
+    color: white;
+    margin: 0 25px;
+}
+
+    
+
+
