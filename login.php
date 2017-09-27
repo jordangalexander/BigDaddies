@@ -1,7 +1,6 @@
 <?php
 // Include config file
-require_once 'config.php';
- 
+require_once 'config.php'; 
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
@@ -50,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;      
-                            header("location: welcome.php");
+                            header("location: index.html");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'The password you entered was not valid.';
@@ -73,38 +72,75 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
- 
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username:<sup>*</sup></label>
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password:<sup>*</sup></label>
-                <input type="password" name="password" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-            </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-        </form>
-    </div>    
-</body>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:400,700" rel="stylesheet">
+    </head>
+    
+    
+    <div class = "wrapper">
+        <body>
+            <header>
+
+                    <nav>
+                        <ul>
+                            <li><a href = "index.html">Home</a></li>
+                            <li><a href = "login.php">Login</a></li>
+                            <li><a href = "register.php">Register</a></li>
+                        </ul>
+                    </nav>
+                
+                    <h1>Big Daddy's E-Mart</h1>
+                
+                    <nav id = "right">
+                        <ul>
+                            <li><a href = "acc.html">My Account</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            
+            <main id = "loginMain">
+                <div id = "loginDiv">
+                    <h1>Login Here!</h1>
+                    <form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method='post'>
+                        <p>
+                            <input type='text' name='username' value='<?php echo $username; ?>'>
+                            Username
+                        </p>
+                        <p><?php echo $username_err; ?></span>
+                        <p>
+                            <input type='password' name='password'>
+                            Password
+                        </p>
+                        <p><?php echo $password_err; ?></p>
+                        <p><input type='submit'></p>
+                        <p>Dont have an account? <a href='register.php'>Sign up now</a>.<p>
+                    </form>
+                </div>
+            </main>
+            
+            
+            <footer>
+                
+                <div id = "foot">
+                        <ul>
+                            <li>John Novak</li>
+                            <li>Adam Hahn</li>
+                            <li>Davis Owen</li>
+                            <li>Jordan Alexander</li>
+                            <li>Nolan Daniels</li>
+                            <li>Roy Lin</li>
+                            <li>Sheryar Ali</li>
+                        </ul>
+                </div>
+                
+            </footer>
+         
+        </body>
+    </div>
 </html>
