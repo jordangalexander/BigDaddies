@@ -1,9 +1,16 @@
-body {
-    margin: 0;
-    background-color: '#003380';
+* {
+    font-family: "Saira Semi Condensed";
 }
 
-#wrapper{
+p , p a{
+    color:white;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -12,6 +19,7 @@ body {
 
 header {
     background-color: #00134d;
+    font-size: 18px;
     width: 100%;
     height: 70px;
     position: fixed;
@@ -20,14 +28,38 @@ header {
     padding-bottom: 10px;
     z-index: 20;
     overflow: hidden;
+    border-bottom: solid 3px white;
 }
 
-nav {
+header h1 {
+    font-size: 50px;
+    font-family: 'Saira Semi Condensed';
+    color: white;
+    width: 34%;
+    display: inline;
+    float: left;
+    margin: auto;
+    margin-top: 5px;
+    animation-name: rubberBand;
+    animation-duration: 15s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+header nav {
     text-align: left;
-    width: 25%;
+    width: 33%;
     padding: 10px 0;
     display: inline;
     float: left;
+    animation-name: slideInDown;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+header nav ul {
+    padding: 0 20px;
 }
 
 header nav li {
@@ -38,26 +70,35 @@ header nav li {
     width: 100px;
 }
 
+header a:visited {
+    color: #00ccff;
+}
+header a {
+    color: white;
+}
+
+#right {
+    text-align: right;
+    
+}
+
+
+
+/*  MIDDLE  */
 
 main {
     z-index: 1;
-    background-image: url("images/skyline.jpg");
-    background-position: -20px -80px;
     position: relative;
     text-align: center;
-    top: 70px;
+    top: 80px;
     border: solid black;
-    border-bottom: 0px;
+    border-bottom: 0px; 
 }
 
-h1 {
-    font-size: 50px;
-    font-family: 'Saira Semi Condensed';
-    color: white;
-    width: 50%;
-    display: inline;
-    float: left;
-    margin-top: 5px;
+#loginMain {
+    background-image: url("images/360bridge.jpg");
+    background-size: cover;
+    height: 90vh;
 }
 
 .shit {
@@ -66,8 +107,20 @@ h1 {
 }
 
 .buysell {
-    height: 750px;
+    height: 1000px;
     text-align: center;
+    background-image: url("images/skyline2.jpg");
+    background-size: cover;
+}
+
+.buysell a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.buysell ul {
+    margin: 0 0;
 }
 
 .buysell li {
@@ -80,18 +133,23 @@ h1 {
     margin-right: 50px;
     margin-top: 150px;
     border: solid 5px white;
+    padding: 0px 40px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.moreshit {
-    background-color: #00134d;
+#icons img {
+    margin: 0 160px;
+}
+
+.lower {
+    background: linear-gradient(to bottom, #00134d 0%, #fff 160%);
     color: white;
     font-family: 'Saira Semi Condensed';
     height: 800px;
     padding-top: 20px;
 }
 
-.moreshit h2 {
+.lower h2 {
     color: white;
     font-family: 'Saira Semi Condensed';
 }
@@ -104,67 +162,209 @@ h1 {
     height: 300px;
     border: solid 5px white;
     padding-top: 10px;
+    padding-bottom: 200px;
 }
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+#loginDiv {
+    border: solid 5px white;
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+    background-color: rgba(60, 60, 60, 0.5);
+}
+
+.sellForm {
+    background-image: url("images/austin.jpg");
+    background-size: cover;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 100px;
+    height: 1000px;
+}
+.sellForm table {
+    background-color: rgba(60, 60, 60, 0.7);
+    font-size: 20px;
+    color: white;
+    border: solid;
+    margin: auto; 
+    padding: 10px 50px;
+}
+.sellForm tr {
+    vertical-align: top;
+    border: solid 2px black; 
+    text-align: center;
+}
+.sellForm th {
+    text-align: right;
+}
+.sellForm td {
+    text-align: left;
+}
+.sellForm input {
+    width: 400px;
+}
+.sellForm textArea {
+    width: 400px;
+    height: 200px;
+}
+#buttons td{
+    text-align: left;
+    padding-left: 10px;
+}
+#buttons input {
+    width: 10px;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+#submit {
+    text-align: center;
+}
+#submit input {
+    width: 200px;
+    margin: auto;
+    
+}
+
+#regMain {
+    background-image: url("images/capitol.jpg");
+    background-size: cover;
+    height: 1000px;
+}
+
+.regDiv table {
+    color: white;
+    background-color: rgba(60, 60, 60, 0.5);
+    border: solid 2px white;
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+}
+
+#regHead {
+    text-align: center;
+    margin: auto;
+}
+
+.regDiv th {
+    float: right;
+}
+.regDiv td {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.accMain {
+    background-image: url(images/hamiltonpool.jpg);
+    background-size: cover;
+    height: 1200px;
+    
+}
+
+.accMain table {
+    color: white;
+    background-color: rgba(60, 60, 60, 0.6);
+    border: solid 2px white;
+    margin: auto;
+    width: 500px;
+}
+
+.accMain th {
+    
+}
+/*  FOOTER    */
 
 footer {
     position: fixed;
     background-color: #00134d;
     width: 100%;
-    z-index: 40;
+    z-index: 100;
     bottom: 0;
     padding-top: 5px;
-    height:120px;
     border-top: solid white 3px;
 }
 
-#footleft {
-    width: 25%;
-    float: left;
-    display:inline;
-}
-
-#footleft li {
-    display: inline;
-    color: white;
-    margin: 0 25px;
-}
-
-#footmid {
-    width: 50%;
-    height: 50px;
+#foot {
+    width: 100%;
     float: left;
     display: inline-block;
+    animation-name: slideInUp;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
     text-align: center;
 }
-
-#footmid li {
-    background-color: white;
-    width: 120px;
-    display: inline-block;
-    font-size: 20px;
-    border: solid 3px white;
-    border-radius: 15px;
-    background-color: gray;
+#foot ul {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#footright {
-    width: 25%;
-    height: 50px;
-    float: left;
-    display: inline;
-    text-align: right;
-}
-
-#footright li {
+#foot li {
     display: inline;
     color: white;
-    margin: 0 25px;
+    margin: 25px;
+    
 }
 
-a {
-    text-decoration:none;
-    color: white;
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
 
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+    
+    90% {
+        transform:scale3d(1, 1, 1);
+    }    
+
+  93% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  94% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  95% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  96.5% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  97.5% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
     
